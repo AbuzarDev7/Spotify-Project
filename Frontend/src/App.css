@@ -1,0 +1,23 @@
+.app-container {
+  display: flex;
+  height: calc(100vh - 90px); /* 90px is for the player */
+  width: 100%;
+  background-color: var(--bg-base);
+  gap: 8px;
+  padding: 8px;
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--bg-highlight);
+  border-radius: 8px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.player-container {
+  height: 90px;
+  background-color: var(--bg-base);
+  width: 100%;
+  border-top: 1px solid var(--bg-elevated);
+}

@@ -1,0 +1,120 @@
+.sidebar {
+  width: 320px;
+  background-color: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-card {
+  background-color: var(--bg-highlight);
+  border-radius: 8px;
+  padding: 16px 24px;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--text-base);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-menu-item:hover {
+  color: var(--text-highlight);
+}
+
+.sidebar-menu-item.active {
+  color: var(--text-highlight);
+}
+
+.sidebar-icon {
+  font-size: 24px;
+}
+
+.library-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-base);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.library-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.library-header-left:hover {
+  color: var(--text-highlight);
+}
+
+.library-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-base);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: var(--bg-elevated);
+  color: var(--text-highlight);
+}
+
+.library-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.create-playlist-btn {
+  background-color: var(--bg-elevated);
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.create-playlist-btn h4 {
+  color: var(--text-highlight);
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.create-playlist-btn p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.create-playlist-btn button {
+  background-color: var(--text-highlight);
+  color: var(--bg-base);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 0.1s;
+}
+
+.create-playlist-btn button:hover {
+  transform: scale(1.04);
+}
