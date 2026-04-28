@@ -55,6 +55,11 @@ const Navbar = () => {
         {user ? (
           <>
             <button className="explore-premium-btn">Explore Premium</button>
+            {user.role === 'artist' && (
+              <button className="add-music-btn" onClick={() => navigate('/add-music')}>
+                Add Music
+              </button>
+            )}
             <button className="install-app-btn">
               <GoDownload size={18} />
               <span>Install App</span>

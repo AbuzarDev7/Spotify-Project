@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const musicScema  = new mongoose.Schema({
+const musicSchema  = new mongoose.Schema({
     url:{
         type:String,
         required:true,
@@ -14,10 +14,10 @@ const musicScema  = new mongoose.Schema({
     },
     artist:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"user",
+        ref:"users",
         required:true
     }
 })
 
-const music = mongoose.model("music" , musicScema);
+const music = mongoose.model("music" , musicSchema);
 module.exports = music

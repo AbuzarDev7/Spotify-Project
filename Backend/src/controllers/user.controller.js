@@ -90,9 +90,35 @@ const getArtistProfile = async (req, res) => {
     }
 };
 
+const becomeArtist = async (req, res) => {
+    try {
+        const userId = req.user._id;
+        const user = await userModal.findById(userId);
+
+        if (user.role === 'artist') {
+            return res.status(400).json({ message: "You are already an artist" });
+        }
+
+        user.role = 'artist';
+        await user.save();
+
+        res.status(200).json({ 
+            message: "Success! You are now an artist", 
+            user: {
+                _id: user._id,
+                username: user.username,
+                role: user.role
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ message: "Error updating role", error: error.message });
+    }
+};
+
 module.exports = {
     toggleLikeSong,
     getLikedSongs,
     followArtist,
-    getArtistProfile
+    getArtistProfile,
+    becomeArtist
 };
