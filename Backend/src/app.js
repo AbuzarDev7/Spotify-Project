@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Vite default port
+    origin: true, // Dynamically allow the origin that made the request
     credentials: true
 }));
 
